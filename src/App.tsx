@@ -5,7 +5,7 @@ function App() {
     <>
       <button
         onClick={() =>
-          fetch("http://localhost:8000/api/v1/user/cookie", {
+          fetch(`${process.env.SERVER_URL}/api/v1/user/cookie`, {
             method: "GET",
             credentials: "include",
           })
@@ -15,7 +15,7 @@ function App() {
       </button>
       <button
         onClick={() =>
-          fetch("http://localhost:8000/api/v1/user/cookie/test", {
+          fetch(`${process.env.SERVER_URL}/api/v1/user/cookie/test`, {
             method: "GET",
             credentials: "include",
           })
